@@ -6,17 +6,12 @@
 <title>Aashir Ahmed — Social Media Manager & Meta Ads Specialist</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#071a18;--surface:#0a211e;--card:#0d2824;--card2:#102e29;
-  --accent:#2dd4bf;--accent2:#5eead4;--text:#e8f4f2;--muted:#6b9e96;--border:#163d37;
-}
+:root{--bg:#071a18;--surface:#0a211e;--card:#0d2824;--card2:#102e29;--accent:#2dd4bf;--accent2:#5eead4;--text:#e8f4f2;--muted:#6b9e96;--border:#163d37;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:300;overflow-x:hidden;cursor:none;}
 .cursor{width:8px;height:8px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 10px var(--accent);}
 .cursor-ring{width:32px;height:32px;border:1px solid var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:0.5;transition:all 0.1s ease;}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;padding:24px 64px;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:rgba(7,26,24,0.85);backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color 0.3s;}
 nav.scrolled{border-bottom-color:var(--border);}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
@@ -25,10 +20,8 @@ nav.scrolled{border-bottom-color:var(--border);}
 .nav-links{display:flex;gap:40px;list-style:none;}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;transition:color 0.3s;}
 .nav-links a:hover{color:var(--accent);}
-.nav-cta{background:var(--accent);color:var(--bg);padding:10px 24px;border-radius:100px;font-size:12px;font-weight:500;letter-spacing:0.5px;text-decoration:none;transition:all 0.3s;}
+.nav-cta{background:var(--accent);color:var(--bg);padding:10px 24px;border-radius:100px;font-size:12px;font-weight:500;text-decoration:none;transition:all 0.3s;}
 .nav-cta:hover{background:var(--accent2);transform:translateY(-2px);}
-
-/* HERO */
 .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:120px 64px 80px;}
 .hero-portrait{position:absolute;inset:0;background:url('profile-pic.png') center top / cover no-repeat;opacity:0.18;filter:grayscale(30%);}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(7,26,24,0.3) 0%,rgba(7,26,24,0.5) 40%,rgba(7,26,24,0.92) 80%,var(--bg) 100%);}
@@ -46,8 +39,6 @@ nav.scrolled{border-bottom-color:var(--border);}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
 .scroll-ind{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:20px;animation:bounce 2s ease infinite;z-index:2;}
 @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
-
-/* ABOUT */
 .about-sec{padding:120px 64px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
 .slabel{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:20px;font-weight:500;}
 .stitle{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,64px);font-weight:700;letter-spacing:-1.5px;line-height:1.05;margin-bottom:32px;}
@@ -55,8 +46,6 @@ nav.scrolled{border-bottom-color:var(--border);}
 .about-photo{border-radius:24px;overflow:hidden;border:1px solid var(--border);height:500px;}
 .about-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform 0.6s ease;}
 .about-photo:hover img{transform:scale(1.03);}
-
-/* EXPERIENCE */
 .exp-sec{padding:100px 64px;background:var(--surface);}
 .sec-header{margin-bottom:60px;}
 .exp-timeline{display:flex;flex-direction:column;}
@@ -77,11 +66,9 @@ nav.scrolled{border-bottom-color:var(--border);}
 .exp-results-grid{display:flex;gap:32px;flex-wrap:wrap;}
 .exp-rval{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--accent);letter-spacing:-0.5px;line-height:1;}
 .exp-rlbl{color:var(--muted);font-size:12px;margin-top:4px;}
-
-/* CASE STUDIES */
 .cases-sec{padding:100px 64px;}
 .cases-tabs{display:flex;gap:12px;margin-bottom:48px;flex-wrap:wrap;}
-.case-tab{padding:10px 24px;border-radius:100px;font-size:13px;border:1px solid var(--border);color:var(--muted);background:transparent;cursor:none;transition:all 0.3s;font-family:'Inter',sans-serif;}
+.case-tab{padding:10px 24px;border-radius:100px;font-size:13px;border:1px solid var(--border);color:var(--muted);background:transparent;cursor:pointer;transition:all 0.3s;font-family:'Inter',sans-serif;}
 .case-tab.active{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:500;}
 .case-tab:hover:not(.active){border-color:var(--accent);color:var(--accent);}
 .case-panel{display:none;}
@@ -98,8 +85,6 @@ nav.scrolled{border-bottom-color:var(--border);}
 .case-rcard{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:20px;}
 .case-rval{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--accent);letter-spacing:-1px;line-height:1;}
 .case-rlbl{color:var(--muted);font-size:12px;margin-top:6px;}
-
-/* SERVICES */
 .svc-sec{padding:100px 64px;background:var(--surface);}
 .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:60px;}
 .svc-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px;transition:all 0.4s;opacity:0;transform:translateY(20px);}
@@ -108,8 +93,6 @@ nav.scrolled{border-bottom-color:var(--border);}
 .svc-icon{font-size:28px;margin-bottom:20px;}
 .svc-card h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;letter-spacing:-0.5px;margin-bottom:16px;}
 .svc-card p{color:var(--muted);font-size:15px;line-height:1.8;}
-
-/* CONTACT */
 .contact-sec{padding:100px 64px;text-align:center;}
 .contact-inner{max-width:640px;margin:0 auto;}
 .contact-title{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,68px);font-weight:700;letter-spacing:-2px;line-height:1.05;margin-bottom:20px;}
@@ -118,30 +101,15 @@ nav.scrolled{border-bottom-color:var(--border);}
 .contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
 .contact-link{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--border);color:var(--text);padding:14px 28px;border-radius:100px;font-size:13px;text-decoration:none;transition:all 0.3s;}
 .contact-link:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
-
-footer{padding:28px 64px;border-top:1px solid var(--border);display:flex;justify-content:space-between;color:var(--muted);font-size:12px;letter-spacing:0.5px;}
-
+footer{padding:28px 64px;border-top:1px solid var(--border);display:flex;justify-content:space-between;color:var(--muted);font-size:12px;}
 .reveal{opacity:0;transform:translateY(20px);transition:all 0.7s ease;}
 .reveal.vis{opacity:1;transform:translateY(0);}
-
-@media(max-width:900px){
-  nav{padding:18px 24px;}.nav-links{display:none;}
-  .hero{padding:100px 24px 80px;}
-  .about-sec{grid-template-columns:1fr;padding:80px 24px;gap:40px;}
-  .about-photo{height:320px;order:-1;}
-  .exp-sec,.cases-sec,.svc-sec,.contact-sec{padding:80px 24px;}
-  .svc-grid{grid-template-columns:1fr;}
-  .case-gallery{grid-template-columns:1fr;}
-  .case-results-grid{grid-template-columns:1fr;}
-  footer{padding:20px 24px;flex-direction:column;gap:8px;}
-}
+@media(max-width:900px){nav{padding:18px 24px;}.nav-links{display:none;}.hero{padding:100px 24px 80px;}.about-sec{grid-template-columns:1fr;padding:80px 24px;gap:40px;}.about-photo{height:320px;order:-1;}.exp-sec,.cases-sec,.svc-sec,.contact-sec{padding:80px 24px;}.svc-grid{grid-template-columns:1fr;}.case-gallery{grid-template-columns:1fr;}.case-results-grid{grid-template-columns:1fr;}footer{padding:20px 24px;flex-direction:column;gap:8px;}}
 </style>
 </head>
 <body>
-
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="ring"></div>
-
 <nav id="nav">
   <a href="#" class="nav-logo">
     <img src="profile-pic.png" alt="Aashir">
@@ -156,7 +124,6 @@ footer{padding:28px 64px;border-top:1px solid var(--border);display:flex;justify
   </ul>
   <a href="#contact" class="nav-cta">Let's Work Together</a>
 </nav>
-
 <section class="hero">
   <div class="hero-portrait"></div>
   <div class="hero-overlay"></div>
@@ -165,11 +132,8 @@ footer{padding:28px 64px;border-top:1px solid var(--border);display:flex;justify
     <h1 class="hero-name">Aashir Ahmed</h1>
     <p class="hero-tagline">I help brands grow online with strategy,<br>paid ads, and content that actually converts.</p>
     <div class="hero-pills">
-      <span class="pill">4+ Years</span>
-      <span class="pill">Meta Ads</span>
-      <span class="pill">Organic Growth</span>
-      <span class="pill">Content Strategy</span>
-      <span class="pill">Lead Generation</span>
+      <span class="pill">4+ Years</span><span class="pill">Meta Ads</span>
+      <span class="pill">Organic Growth</span><span class="pill">Content Strategy</span><span class="pill">Lead Generation</span>
     </div>
     <div class="hero-btns">
       <a href="#contact" class="btn-main">Let's Work Together</a>
@@ -178,7 +142,6 @@ footer{padding:28px 64px;border-top:1px solid var(--border);display:flex;justify
   </div>
   <div class="scroll-ind">↓</div>
 </section>
-
 <section class="about-sec" id="about">
   <div>
     <p class="slabel reveal">Introduction</p>
@@ -191,7 +154,6 @@ footer{padding:28px 64px;border-top:1px solid var(--border);display:flex;justify
     <img src="profile-pic.png" alt="Aashir Ahmed">
   </div>
 </section>
-
 <section class="exp-sec" id="experience">
   <div class="sec-header">
     <p class="slabel reveal">Career</p>
@@ -261,7 +223,6 @@ footer{padding:28px 64px;border-top:1px solid var(--border);display:flex;justify
     </div>
   </div>
 </section>
-
 <section class="cases-sec" id="cases">
   <div class="sec-header">
     <p class="slabel reveal">Portfolio</p>
@@ -278,21 +239,21 @@ footer{padding:28px 64px;border-top:1px solid var(--border);display:flex;justify
       <h3 class="case-title">Instagram Growth & Content Management</h3>
       <p class="case-client">Fitness Brand — Agency Client (4Orbits)</p>
       <div class="case-gallery">
-        <div class="case-img"><img src="trifit instagram insights 14 feb to 13 march.png" alt="Instagram Insights"></div>
-        <div class="case-img"><img src="trifit instagram insights 14 feb to 13 march.png" alt="Instagram Insights 2"></div>
-        <div class="case-img"><img src="trifit instagram insights 14 feb to 13 march.png" alt="Instagram Insights 3"></div>
+        <div class="case-img"><img src="trifit%20instagram%20insights%2014%20feb%20to%2013%20march.png" alt="Instagram Insights"></div>
+        <div class="case-img"><img src="trifit%20instagram%20insights%2014%20feb%20to%2013%20march.png" alt="Instagram Insights 2"></div>
+        <div class="case-img"><img src="trifit%20instagram%20insights%2014%20feb%20to%2013%20march.png" alt="Instagram Insights 3"></div>
       </div>
       <p class="case-section-label">The Challenge</p>
       <p class="case-text">The brand needed consistent, high-quality content to grow their Instagram presence and reach a wider audience beyond existing followers.</p>
       <p class="case-section-label">What I Did</p>
-      <p class="case-text">Managed complete Instagram presence — content calendar, reel creation, story management, hashtag strategy and community engagement. Focused on reaching non-followers through organic content.</p>
+      <p class="case-text">Managed complete Instagram presence — content calendar, reel creation, story management, hashtag strategy and community engagement.</p>
       <div class="case-results-grid">
-        <div class="case-rcard"><div class="case-rval">2.1M+</div><div class="case-rlbl">Total Views (28 days)</div></div>
-        <div class="case-rcard"><div class="case-rval">332.7K</div><div class="case-rlbl">Instagram Reach</div></div>
+        <div class="case-rcard"><div class="case-rval">2.1M+</div><div class="case-rlbl">Total Views</div></div>
+        <div class="case-rcard"><div class="case-rval">332.7K</div><div class="case-rlbl">Reach</div></div>
         <div class="case-rcard"><div class="case-rval">11.7K</div><div class="case-rlbl">Interactions</div></div>
         <div class="case-rcard"><div class="case-rval">982</div><div class="case-rlbl">New Followers</div></div>
         <div class="case-rcard"><div class="case-rval">54.8%</div><div class="case-rlbl">Non-Follower Reach</div></div>
-        <div class="case-rcard"><div class="case-rval">215</div><div class="case-rlbl">Content Pieces (1 week)</div></div>
+        <div class="case-rcard"><div class="case-rval">215</div><div class="case-rlbl">Content Pieces/Week</div></div>
       </div>
     </div>
   </div>
@@ -301,9 +262,9 @@ footer{padding:28px 64px;border-top:1px solid var(--border);display:flex;justify
       <h3 class="case-title">Facebook Growth & Community Management</h3>
       <p class="case-client">Fitness Brand — Agency Client (4Orbits)</p>
       <div class="case-gallery">
-        <div class="case-img"><img src="trifit facebook insight details.PNG" alt="Facebook Insights"></div>
-        <div class="case-img"><img src="trifit facebook insight details.PNG" alt="Facebook Insights 2"></div>
-        <div class="case-img"><img src="trifit facebook insight details.PNG" alt="Facebook Insights 3"></div>
+        <div class="case-img"><img src="trifit%20facebook%20insight%20details.PNG" alt="Facebook Insights"></div>
+        <div class="case-img"><img src="trifit%20facebook%20insight%20details.PNG" alt="Facebook Insights 2"></div>
+        <div class="case-img"><img src="trifit%20facebook%20insight%20details.PNG" alt="Facebook Insights 3"></div>
       </div>
       <p class="case-section-label">The Challenge</p>
       <p class="case-text">Managing Facebook presence required consistent posting, community engagement and driving page visits and follows.</p>
@@ -324,26 +285,25 @@ footer{padding:28px 64px;border-top:1px solid var(--border);display:flex;justify
       <h3 class="case-title">Meta Ads — Lead Generation Campaigns</h3>
       <p class="case-client">Fitness Brand — Agency Client (4Orbits)</p>
       <div class="case-gallery">
-        <div class="case-img"><img src="meta ads ss .png" alt="Meta Ads"></div>
-        <div class="case-img"><img src="meta ads ss .png" alt="Meta Ads 2"></div>
-        <div class="case-img"><img src="meta ads ss .png" alt="Meta Ads 3"></div>
+        <div class="case-img"><img src="meta%20ads%20ss%20.png" alt="Meta Ads"></div>
+        <div class="case-img"><img src="meta%20ads%20ss%20.png" alt="Meta Ads 2"></div>
+        <div class="case-img"><img src="meta%20ads%20ss%20.png" alt="Meta Ads 3"></div>
       </div>
       <p class="case-section-label">The Challenge</p>
       <p class="case-text">The brand needed consistent lead flow through paid campaigns with controlled cost per lead across multiple objectives.</p>
       <p class="case-section-label">What I Did</p>
-      <p class="case-text">Managed end-to-end Meta Ads campaigns — audience targeting, A/B testing, budget allocation and performance optimization across Facebook & Instagram.</p>
+      <p class="case-text">Managed end-to-end Meta Ads campaigns — audience targeting, A/B testing, budget allocation and performance optimization.</p>
       <div class="case-results-grid">
-        <div class="case-rcard"><div class="case-rval">136+</div><div class="case-rlbl">Campaigns Managed</div></div>
+        <div class="case-rcard"><div class="case-rval">136+</div><div class="case-rlbl">Campaigns</div></div>
         <div class="case-rcard"><div class="case-rval">1,757</div><div class="case-rlbl">Total Leads</div></div>
         <div class="case-rcard"><div class="case-rval">2.1M+</div><div class="case-rlbl">Impressions</div></div>
-        <div class="case-rcard"><div class="case-rval">Rs 118</div><div class="case-rlbl">Cost per Lead (best)</div></div>
-        <div class="case-rcard"><div class="case-rval">252</div><div class="case-rlbl">Leads (single campaign)</div></div>
+        <div class="case-rcard"><div class="case-rval">Rs 118</div><div class="case-rlbl">Best Cost/Lead</div></div>
+        <div class="case-rcard"><div class="case-rval">252</div><div class="case-rlbl">Leads (1 campaign)</div></div>
         <div class="case-rcard"><div class="case-rval">Rs 2.2L</div><div class="case-rlbl">Ad Spend Managed</div></div>
       </div>
     </div>
   </div>
 </section>
-
 <section class="svc-sec" id="services">
   <div class="sec-header">
     <p class="slabel reveal">What I Offer</p>
@@ -357,7 +317,6 @@ footer{padding:28px 64px;border-top:1px solid var(--border);display:flex;justify
     <div class="svc-card"><div class="svc-icon">📈</div><h3>Performance Analytics</h3><p>In-depth performance tracking using Meta Business Suite, GA4, and Hootsuite. Monthly reports with actionable insights to continuously improve your strategy.</p></div>
   </div>
 </section>
-
 <section class="contact-sec" id="contact">
   <div class="contact-inner">
     <p class="slabel reveal">Let's Work Together</p>
@@ -370,12 +329,10 @@ footer{padding:28px 64px;border-top:1px solid var(--border);display:flex;justify
     </div>
   </div>
 </section>
-
 <footer>
   <span>© 2026 Aashir Ahmed Khan · Karachi, Pakistan</span>
   <span>Social Media Manager & Meta Ads Specialist</span>
 </footer>
-
 <script>
 const cur=document.getElementById("cursor"),ring=document.getElementById("ring");
 let mx=0,my=0,rx=0,ry=0;
